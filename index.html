@@ -51,6 +51,50 @@
 				Tellnetillä</p>
 				<p> <a href="https://www.scribd.com/doc/276379247/Irkkaaminen-Telnetilla">Dokumentointini</a><p>
 			</section>
+			<section>
+					<section>
+					<h2>Irc-logger</h2>
+					<p>Tehtävänä oli dokumentoida irclokki ohjelman asennus vaiheet.</p>	
+					</section>
+					<section>
+						<h2>Step 1</h2>
+						<p>Laitetaan commandlinelle seuraavanlainen komento</p>
+						<p>rhc app create irclokki nodejs-0.10 --from-code</p>
+						<p>https://github.com/jvanhalen/irclokki.git</p>
+						<br>
+						<a href="#" class="navigate-down"></a>
+					</section>
+					<section>
+						<h2>Step 2</h2>
+						<p>Laitetaan commandlinelle seuraavanlaiset komennot</p>
+						<li>rhc cartridge list</li>
+						<li>rhc cartridge add mysql-5.5 -a irclokki</li>
+						</ol>
+					</section>
+					<section>
+						<h2>Step 3</h2>
+						<p>otetaan yhteys ssh:llä sovellukseemme komennolla</p>
+						<li>rhc ssh irclokki</li>
+						<p>Annetaan muutama komento ssh ikkunassa</p>
+						<ul>
+						<li>mysql</li>
+						<li>DROP DATABASE if exists irclog;</li>
+						<li>CREATE DATABASE irclog;</li>
+						<li>USE irclog;</li>
+						<li>CREATE TABLE log (id INT PRIMARY KEY AUTO_INCREMENT, timestamp BIGINT, message TEXT);</li>
+						</ul>
+						<br>
+						<a href="#/2"></a>
+					</section>
+					<section>
+						<h2>Lopuksi</h2>
+						<p>käynnistetään sovelluksemme uudestaan antamalla komento</p>
+						<li>rhc app-restart irclokki</li>
+						<p>tämän jälkeen sovellus pitäisi löytyä osoitteesta irclokki-("username").rhcloud.com</p>
+						<br>
+						<a href="#/2"></a>
+					</section>
+				</section>
  
 			</div>
 	</div>
