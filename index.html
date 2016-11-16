@@ -25,65 +25,22 @@
 			</section>
 			<section id="show-a-link">
 				<h2>Aiheen valinta</h2>
-				<p>Tehtävän aihe tuli nopeasti mieleen sillä, kämmpikseni on hyvin tuskissaan jokaisella kauppareissulla kun kello neljän liikenne yllättää.</p>
+				<p>Tehtävän aihe tuli nopeasti mieleen sillä, viime Helsingin reissulla huomasin, että googlen navigaattorissa on <a href="https://developers.google.com/maps/documentation/javascript/examples/layer-traffic">ruuhka kerros</a>.</p>
 			</section>
  
 			<section>
-				<h2>Toteutus</h2>
-				<p>Aloitin toteutuksen etsimällä miellyttävää css teemaa ja se löytyi melko nopeasti</p>
-				<p> <a href="https://templated.co/">Templated.co sivulta</a><p>
+				<h2>Ulkoasu</h2>
+				<p>Aloitin toteutuksen etsimällä miellyttävää teemaa ja se löytyi melko nopeasti.</p>
+				<p>Päädyin valinnassa hyvin hillittyyn ja yksinkertaiseen teemaan.</p>
+				<p> <a href="https://templated.co/visualize">Linkki alkuperäiseen teemaan</a><p>
 			</section>
 			<section>
-				<h2>IRC</h2>
-				<p>Tehtävänä oli irkata
-				Tellnetillä</p>
-				<p> <a href="https://www.scribd.com/doc/276379247/Irkkaaminen-Telnetilla">Dokumentointini</a><p>
+				<h2>Tekninen toteutus</h2>
+				<p>Ulkoasun valinnan jälkeen aloin toteuttamaan Google mapsia ja ruuhkakerrosta.</p>
+				<p>Toteutus alkoi tutustumalla googlen omiin tutorialeihin.</p>
+				<p>Mapsin ja ruuhkakerroksen toteutuksen jälkeen vuorossa oli <a href="http://codesynthesis.co.uk/code-snippets/google-maps-location-search-that-updates-center">hakukentän tekeminen</a>.</p>
+				<p>Loppuviimeistelynä lisäsin haun toteutuksen <a href="http://stackoverflow.com/questions/12955222/how-to-trigger-html-button-when-you-press-enter-in-textbox">entteriä painamalla</a> :)</p>
 			</section>
-			<section>
-					<section>
-					<h2>Irc-logger</h2>
-					<p>Tehtävänä oli dokumentoida irclokki ohjelman asennus vaiheet.</p>	
-					</section>
-					<section>
-						<h2>Step 1</h2>
-						<p>Laitetaan commandlinelle seuraavanlainen komento</p>
-						<p>rhc app create irclokki nodejs-0.10 --from-code</p>
-						<p>https://github.com/jvanhalen/irclokki.git</p>
-						<br>
-						<a href="#" class="navigate-down"></a>
-					</section>
-					<section>
-						<h2>Step 2</h2>
-						<p>Laitetaan commandlinelle seuraavanlaiset komennot</p>
-						<li>rhc cartridge list</li>
-						<li>rhc cartridge add mysql-5.5 -a irclokki</li>
-						</ol>
-					</section>
-					<section>
-						<h2>Step 3</h2>
-						<p>otetaan yhteys ssh:llä sovellukseemme komennolla</p>
-						<li>rhc ssh irclokki</li>
-						<p>Annetaan muutama komento ssh ikkunassa</p>
-						<ul>
-						<li>mysql</li>
-						<li>DROP DATABASE if exists irclog;</li>
-						<li>CREATE DATABASE irclog;</li>
-						<li>USE irclog;</li>
-						<li>CREATE TABLE log (id INT PRIMARY KEY AUTO_INCREMENT, timestamp BIGINT, message TEXT);</li>
-						</ul>
-						<br>
-						<a href="#/2"></a>
-					</section>
-					<section>
-						<h2>Lopuksi</h2>
-						<p>käynnistetään sovelluksemme uudestaan antamalla komento</p>
-						<li>rhc app-restart irclokki</li>
-						<p>tämän jälkeen sovellus pitäisi löytyä osoitteesta irclokki-("username").rhcloud.com</p>
-						<br>
-						<a href="#/2"></a>
-					</section>
-				</section>
- 
 			</div>
 	</div>
 	<script src="lib/js/head.min.js"></script>
